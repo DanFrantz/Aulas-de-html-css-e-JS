@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Calc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    
+    <div class="content">
+        <div class="visor">
+            <p class="teclado" id="teclado"></p>
+        </div>
+        <div class="grid-container">
+            <button class="opera" id="%"  onclick="porcentagem()">%</button>
+            <button class="opera" id="√" onclick="raizQuad()">√</button>
+            <button class="opera" id="x²">x²</button>
+            <button class="opera" id="1/x">1/x</button>        
+            <button class="opera" id="CE">CE</button>
+            <button class="opera" id="C" onclick="limparNumeros()">C</button>
+            <button class="opera" id="Del">Del</button>
+            <button class="opera" id="/" onclick="divisao()">/</button>
+            <button class="numeros" id="7" onclick="addNumero(7)">7</button>
+            <button class="numeros" id="8" onclick="addNumero(8)">8</button>
+            <button class="numeros" id="9" onclick="addNumero(9)">9</button>
+            <button class="opera" id="*" onclick="multiplicacao()">*</button>
+            <button class="numeros" id="4" onclick="addNumero(4)">4</button>
+            <button class="numeros" id="5" onclick="addNumero(5)">5</button>
+            <button class="numeros" id="6" onclick="addNumero(6)">6</button>
+            <button class="opera" id="-" onclick="subtracao()">-</button>
+            <button class="numeros" id="1" onclick="addNumero(1)">1</button>
+            <button class="numeros" id="2" onclick="addNumero(2)">2</button>
+            <button class="numeros" id="3" onclick="addNumero(3)"> 3</button>
+            <button class="opera" id="+" onclick="soma()">+</button>
+            <button class="opera" id="±">±</button>
+            <button class="numeros" id="0" onclick="addNumero(0)">0</button>
+            <button class="opera" id="," onclick=addVirgula()>,</button>
+            <button class="opera" id="=" onclick="calcResultado()">=</button>
+        </div>
+    </div>
+<script src="calc.js"></script>    
+</body>
+</html>
