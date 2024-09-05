@@ -32,7 +32,7 @@ function ultimoCaractereEhNumero() {
     
     function addNumero(numAdicionar){
         //Adiciona um número ao final da string
-        visor.textContent=visor.textContet+numAdicionar;
+        visor.textContent=visor.textContent+numAdicionar;
         
     }
 
