@@ -14,13 +14,10 @@
             <p class="teclado" id="teclado"></p>
         </div>
         <div class="grid-container">
-            <button class="opera" id="%"  onclick="porcentagem()">%</button>
-            <button class="opera" id="√" onclick="raizQuad()">√</button>
-            <button class="opera" id="x²">x²</button>
-            <button class="opera" id="1/x">1/x</button>        
-            <button class="opera" id="CE">CE</button>
+            
+            <button class="opera" id="x²" onclick="potencia()">x²</button>
             <button class="opera" id="C" onclick="limparNumeros()">C</button>
-            <button class="opera" id="Del">Del</button>
+            <button class="opera" id="Del" onclick="delet()">Del</button>
             <button class="opera" id="/" onclick="divisao()">/</button>
             <button class="numeros" id="7" onclick="addNumero(7)">7</button>
             <button class="numeros" id="8" onclick="addNumero(8)">8</button>
@@ -34,9 +31,9 @@
             <button class="numeros" id="2" onclick="addNumero(2)">2</button>
             <button class="numeros" id="3" onclick="addNumero(3)"> 3</button>
             <button class="opera" id="+" onclick="soma()">+</button>
-            <button class="opera" id="±">±</button>
+            <button class="opera" id="±" onclick="mudarSinal()">±</button>
             <button class="numeros" id="0" onclick="addNumero(0)">0</button>
-            <button class="opera" id="," onclick=addVirgula()>,</button>
+            <button class="opera" id="," onclick="addVirgula()">,</button>
             <button class="opera" id="=" onclick="calcResultado()">=</button>
         </div>
     </div>
