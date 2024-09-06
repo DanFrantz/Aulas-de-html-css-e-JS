@@ -1,10 +1,11 @@
 let visor=document.getElementById("teclado");
+let resultado = 0;
+let operacaoAtual = null;
+let novoNumero = true;
+let original = 0;
+let simbolosOperacao = ['+', '-', '×', '÷'];
 
-// Função para mudar o tema
-function mudarTema(tema) {
-    let content = document.querySelector(".content");
-    content.className = `content ${tema}`; // Adiciona a classe do tema ao elemento
-}
+
 
 function ultimoCaractereEhNumero() {
     // Verifica se o texto não está vazio
@@ -20,9 +21,8 @@ function ultimoCaractereEhNumero() {
     }
     
     function addVirgula(){
-        if (ultimoCaractereEhNumero()==false){
+        if (ultimoCaractereEhNumero()==false || visor.textContent.endsWith("*") || visor.textContent.endsWith("/") || visor.textContent.endsWith("+") || visor.textContent.endsWith("-") ){//Verifica se o último caractere é algo diferente de número
             alert("Não é possível usar vírgula sem usar números")
-            console.log("if")
         }
         else if(ultimoCaractereEhNumero()){
             visor.textContent=visor.textContent+".";
@@ -31,11 +31,10 @@ function ultimoCaractereEhNumero() {
     }
     
     function addNumero(numAdicionar){
-        //Adiciona um número ao final da string
-        visor.textContent=visor.textContent+numAdicionar;
-        
-    }
+            visor.textContent=visor.textContent+numAdicionar;
+            }
 
+    
     function limparNumeros(){
         visor.textContent="";
     }
@@ -45,7 +44,7 @@ function ultimoCaractereEhNumero() {
             alert("Não da pra colocar mais de um símbolo de soma seguido")
         }
 
-        else if(visor.textContent==""){
+        else if(visor.textContent=="" || visor.textContent.endsWith("*") || visor.textContent.endsWith("/") || visor.textContent.endsWith("+") || visor.textContent.endsWith("-") ){
             alert("Não é possível fazer operações de soma sem números")
         }      
         
@@ -59,7 +58,7 @@ function ultimoCaractereEhNumero() {
             alert("Não é possível usar mais de um símbolo de subtração seguido")
         }
 
-        else if(visor.textContent===""){
+        else if(visor.textContent==="" || visor.textContent.endsWith("*") || visor.textContent.endsWith("/") || visor.textContent.endsWith("+") || visor.textContent.endsWith("-") ){
             alert("Não é possível fazer operações de subtração sem números")
         }      
         
@@ -72,8 +71,8 @@ function ultimoCaractereEhNumero() {
         if(visor.textContent.endsWith("*")){
             alert("Não é possível usar mais de uma multiplicação seguida")
         }
-        else if(visor.textContent===("")){
-            alert("Não é possível fazer a multiplicação sem números");
+        else if(visor.textContent===("")|| visor.textContent.endsWith("*") || visor.textContent.endsWith("/") || visor.textContent.endsWith("+") || visor.textContent.endsWith("-") ){
+            alert("Não é possível fazer a multiplicação");
         }
         else if(visor.textContent!=""){
             visor.textContent+="*";
@@ -84,8 +83,8 @@ function ultimoCaractereEhNumero() {
         if(visor.textContent.endsWith("*")){
             alert("Não é possível usar mais de uma divisão seguida")
         }
-        else if(visor.textContent===("")){
-            alert("Não é possível fazer a divisão sem números");
+        else if(visor.textContent===("")  || visor.textContent.endsWith("*") || visor.textContent.endsWith("/") || visor.textContent.endsWith("+") || visor.textContent.endsWith("-") ){
+            alert("Não é possível fazer a divisão");
         }
         else if(visor.textContent!=""){
             visor.textContent+="/";
@@ -108,12 +107,12 @@ function ultimoCaractereEhNumero() {
         }
     }
     function potencia(){
-        if(visor.textContent.endsWith("**")){
+        if(visor.textContent.endsWith("*")){
             alert("Não é possível usar mais de uma potenciação seguida")
         }
 
-        else if(visor.textContent==""){
-            alert("Não é possível fazer operações de potenciação sem números")
+        else if(visor.textContent=="" || visor.textContent.endsWith("*") || visor.textContent.endsWith("/") || visor.textContent.endsWith("+") || visor.textContent.endsWith("-") ){
+            alert("Não é possível fazer operações de potenciação")
         }      
         
         else if(visor.textContent != ""){

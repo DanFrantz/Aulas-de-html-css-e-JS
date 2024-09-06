@@ -21,7 +21,7 @@ body {
     width: 40%;
     margin: auto;
     height: 60%;
-    max-width: 80%;
+    max-width: 25%;
 }
 
 .hidden {
@@ -76,4 +76,5 @@ body {
 
 button {
     cursor: pointer;
+    font-size: 20px;
 }
